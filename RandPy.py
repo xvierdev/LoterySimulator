@@ -4,9 +4,12 @@ import random
 
 sequence = []
 for i in range (1,7):
-    sequence.append(input(f'Digite o {i}° número entre 0 e 60 sem repetição: '))
+    sequence.append(int(input(f'Digite o {i}° número entre 0 e 60 sem repetição: ')))
 
 sequence.sort()
+print(sequence)
+
+input('Press enter')
     
 cont = 0
 
@@ -14,6 +17,7 @@ while True:
     sorted = random.sample(range(1,61), 6)
     sorted.sort()
     cont += 1
+    # print(sorted)
     # Sequência predefinida
     if sorted == sequence:
         break
